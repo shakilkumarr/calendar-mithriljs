@@ -2,7 +2,7 @@
   background: linear-gradient(to bottom right, #C1EE9D 0%,#528f92 80%);
 }
 .shadow-cust{
-  box-shadow: 10px -10px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 10px -10px 0 rgba(0, 0, 0, 0.04);
 }
 .bg-cust-blue{
   background-color: #198eb8;
