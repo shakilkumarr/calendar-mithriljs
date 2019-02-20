@@ -2,6 +2,7 @@ var mithril = require("mithril").m
 require("tachyons")
 require("./Container.css")
 var LeftContainer = require("../LeftContainer/LeftContainer")
+var RightContainer = require("../RightContainer/RightContainer")
 
 var Container = {
   view : function(){
@@ -10,7 +11,7 @@ var Container = {
           mithril("div.relative.center.w-75.bg-custbg-green.tc.pt4.pb4",[
             mithril("div.shadow-cust.inline-flex",[
               mithril("div.bg-cust-blue",[mithril(LeftContainer)]),
-              mithril("div.bg-white")
+              mithril("div.bg-white",[mithril(RightContainer)])
             ])
           ])
       ]
