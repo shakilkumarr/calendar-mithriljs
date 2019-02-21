@@ -19,7 +19,6 @@
     "express": "^4.14.0",
     "mithril": "^2.0.0-rc.4",
     "moment": "^2.24.0",
-    "moment-locales-webpack-plugin": "^1.0.7",
     "tachyons": "^4.10.0",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",

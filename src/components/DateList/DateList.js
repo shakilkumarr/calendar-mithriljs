@@ -25,12 +25,17 @@ var DateList = {
     let count = 0;
     let prevMonDate = false;
     let moment = appstate().userMoment;
+    let isFinished = false;
     let nowDate = currMoment().format("YYYY/MM") === moment.format("YYYY/MM") ? currMoment().date() : 50;
 
-    return calendarObj(moment).map(function(row){
+    return calendarObj(moment).map(function(row, rowIndex){
       return mithril.m("ul.list.pa0.flex",[
         row.map(function(dateObj,index,obj){
           let date = dateObj.date;
+          if(isFinished || (rowIndex > 0 && index === 0 && date === 1)){
+              isFinished = true;
+              return 
+          }
           [prevMonDate,count] = checkPrevDate(count,prevMonDate,index,date,obj);
           return mithril.m(
               "li.cust-li.h2.w2"+ (
