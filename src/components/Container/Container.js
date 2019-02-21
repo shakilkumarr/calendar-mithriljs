@@ -1,6 +1,6 @@
 var mithril = require("mithril").m
-require("tachyons")
-require("./Container.css")
+var tachyons = require("tachyons")
+// require("./Container.css")
 var LeftContainer = require("../LeftContainer/LeftContainer")
 var RightContainer = require("../RightContainer/RightContainer")
 
