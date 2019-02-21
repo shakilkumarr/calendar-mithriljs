@@ -1,6 +1,5 @@
 var mithril = require("mithril").m
 var moment = require("moment")()
-require("tachyons")
 require("./DayList.css")
 
 var DayList = {

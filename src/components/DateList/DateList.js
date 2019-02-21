@@ -1,5 +1,4 @@
 var mithril = require("mithril")
-require("tachyons")
 require("./DateList.css");
 var currMoment = require("moment");
 var appState = require("../appState/appState")

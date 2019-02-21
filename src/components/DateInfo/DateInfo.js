@@ -1,6 +1,5 @@
 var mithril = require("mithril").m
 var appState = require("../appState/appState")
-require("tachyons")
 var MonthAndYear = require("../MonthAndYear/MonthAndYear")
 
 var DateInfo = {

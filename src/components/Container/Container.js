@@ -1,8 +1,7 @@
 var mithril = require("mithril").m
-var tachyons = require("tachyons")
-// require("./Container.css")
 var LeftContainer = require("../LeftContainer/LeftContainer")
 var RightContainer = require("../RightContainer/RightContainer")
+require("./Container.css")
 
 var Container = {
   view : function(){

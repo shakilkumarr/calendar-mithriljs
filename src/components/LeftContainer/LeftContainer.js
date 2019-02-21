@@ -1,7 +1,6 @@
 var mithril = require("mithril").m
 var appState = require("../appState/appState")
 var DateInfo = require("../DateInfo/DateInfo")
-require("tachyons")
 
 var LeftContainer = {
   view : function(){

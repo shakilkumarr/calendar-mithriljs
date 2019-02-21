@@ -1,5 +1,4 @@
 var mithril = require("mithril")
-require("tachyons")
 require("./Arrow.css")
 var appState = require("../appState/appState")
 

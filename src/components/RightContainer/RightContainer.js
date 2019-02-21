@@ -1,5 +1,4 @@
 var mithril = require("mithril").m
-require("tachyons")
 var DateList = require("../DateList/DateList")
 var DayList = require("../DayList/DayList")
 
