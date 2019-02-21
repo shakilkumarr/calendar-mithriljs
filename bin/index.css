@@ -22,7 +22,7 @@ html,body{
   cursor: default;
 }
 .currDate.userSelDate,.userSelDate{
-  background-color: #198eb8;
+  background-color: #008fbc;
   border-radius: 50%;
   color: #fff;
 }
