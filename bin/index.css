@@ -1,3 +1,10 @@
+html,body{
+  height: 100%;
+  margin : 0;
+}
+.min-cust-h100{
+  min-height: 100%
+}
 .currDate{
   color: #198eb8;
   font-weight: 700;
