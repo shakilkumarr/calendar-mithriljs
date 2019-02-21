@@ -1,5 +1,5 @@
 var mithril = require("mithril")
-require("./DateList.css");
+// require("./DateList.css");
 var currMoment = require("moment");
 var appState = require("../appState/appState")
 var calendarObj = require("../getCalender/getCalender");

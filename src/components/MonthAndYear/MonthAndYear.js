@@ -1,5 +1,5 @@
 var mithril = require("mithril").m
-require("./MonthAndYear.css")
+// require("./MonthAndYear.css")
 var appState = require("../appState/appState")
 var Arrow = require("../Arrow/Arrow")
 

@@ -1,5 +1,5 @@
 var mithril = require("mithril")
-require("./Arrow.css")
+// require("./Arrow.css")
 var appState = require("../appState/appState")
 
 var changeRoute = function(action){

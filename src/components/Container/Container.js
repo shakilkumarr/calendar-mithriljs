@@ -1,7 +1,7 @@
 var mithril = require("mithril").m
 var LeftContainer = require("../LeftContainer/LeftContainer")
 var RightContainer = require("../RightContainer/RightContainer")
-require("./Container.css")
+// require("./Container.css")
 
 var Container = {
   view : function(){
