@@ -1,5 +1,4 @@
 var mithril = require("mithril").m
-require("./DateInfo.css")
 var appstate = require("../../appstate");
 require("tachyons")
 var MonthAndYear = require("../MonthAndYear/MonthAndYear")

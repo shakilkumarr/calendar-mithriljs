@@ -1,6 +1,5 @@
 var mithril = require("mithril").m
 require("tachyons")
-require("./RightContainer.css")
 var DateList = require("../DateList/DateList")
 var DayList = require("../DayList/DayList")
 

@@ -2,7 +2,6 @@ var mithril = require("mithril").m
 var appstate = require("../../appstate");
 var DateInfo = require("../DateInfo/DateInfo")
 require("tachyons")
-require("./LeftContainer.css")
 
 var LeftContainer = {
   view : function(){
