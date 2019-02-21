@@ -28,14 +28,14 @@ var RightContainer ={
     let count = 0;
     let prevMonDate = false;
 
-    return mithril("table.pt5.pl3.pr3.pb5.f7.fw5.o-70",[
-      mithril("tr",[
+    return mithril("div.pt5.pl4.pr4.pb5.f7.fw5.o-70.dt",[
+      mithril("ul.list.pa0.flex",[
           days.map(function(day){
-            return mithril("td.pa3",day.toUpperCase())
+            return mithril("li.cust-li.h2.w2",day.toUpperCase())
           })
       ]),
       calendarObj.map(function(row){
-        return mithril("tr",[
+        return mithril("ul.list.pa0.flex",[
             row.map(function(dateObj,index,obj){
               let date = dateObj.date;
               if(count === 0){
@@ -53,7 +53,7 @@ var RightContainer ={
                 }
               }
 
-              return mithril("td.pa3.pointer"+ ( prevMonDate ? ".o-30" : ""),dateObj.date)
+              return mithril("li.cust-li.pointer.h2.w2"+ ( prevMonDate ? ".o-30" : moment.date() === date ? ".currDate.userSelDate" : ""),dateObj.date)
             })
         ])
       })
