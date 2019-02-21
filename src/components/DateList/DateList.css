@@ -2,8 +2,22 @@
   color: #198eb8;
   font-weight: 700;
 }
+.curr-default{
+  cursor: default;
+}
 .currDate.userSelDate,.userSelDate{
   background-color: #198eb8;
+  border-radius: 50%;
+  color: #fff;
+}
+.cust-li{
+  height: 40px;
+  margin: 0 5px;
+  width: 40px;
+  line-height: 40px;
+}
+.cust-li:not(.o-30):not(.userSelDate):hover{
+  background-color: rgba(25, 142, 184, 0.75);
   border-radius: 50%;
   color: #fff;
 }

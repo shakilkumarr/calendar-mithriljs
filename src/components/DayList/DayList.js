@@ -8,7 +8,7 @@ var DayList = {
     let days = moment._locale._weekdaysShort;
     return mithril("ul.list.pa0.flex",[
         days.map(function(day){
-          return mithril("li.cust-li.h2.w2",day.toUpperCase())
+          return mithril("li.cust-li-head.h2.w2",day.toUpperCase())
         })
     ])
   }

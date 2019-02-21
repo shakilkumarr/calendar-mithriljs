@@ -29,10 +29,9 @@ var DateList = {
           let date = dateObj.date;
           [prevMonDate,count] = checkPrevDate(count,prevMonDate,index,date,obj);
           return mithril(
-              "li.cust-li.pointer.h2.w2"+ (
-              prevMonDate ?
-              ".o-30" :
-              nowMoment === date ? ".currDate.userSelDate" : ""),
+              "li.cust-li.h2.w2"+ (
+              prevMonDate ? (".o-30.curr-default") : (".pointer" + (nowMoment === date ? ".currDate.userSelDate" : ""))
+            ),
             {onclick : selectDate},
             dateObj.date
           )
