@@ -1,0 +1,9 @@
+.currDate{
+  color: #198eb8;
+  font-weight: 700;
+}
+.currDate.userSelDate,.userSelDate{
+  background-color: #198eb8;
+  border-radius: 50%;
+  color: #fff;
+}
