@@ -1,4 +1,4 @@
-var mithril = require("mithril").m
+var mithril = require("mithril")
 require("tachyons")
 require("./DateList.css");
 var currMoment = require("moment");
@@ -15,8 +15,10 @@ var checkPrevDate = (count,prevMonDate,index,date,obj) =>{
   }
   return [prevMonDate,count];
 }
-var selectDate = function(){
-
+var selectDate = function(date){
+  let path = mithril.route.get();
+  path = path.substr(0,path.lastIndexOf("/"));
+  mithril.route.set(path+"/"+date);
 }
 var DateList = {
   view : function(vnode) {
@@ -26,18 +28,18 @@ var DateList = {
     let nowDate = currMoment().format("YYYY/MM") === moment.format("YYYY/MM") ? currMoment().date() : 50;
 
     return calendarObj(moment).map(function(row){
-      return mithril("ul.list.pa0.flex",[
+      return mithril.m("ul.list.pa0.flex",[
         row.map(function(dateObj,index,obj){
           let date = dateObj.date;
           [prevMonDate,count] = checkPrevDate(count,prevMonDate,index,date,obj);
-          return mithril(
+          return mithril.m(
               "li.cust-li.h2.w2"+ (
               prevMonDate ?
               (".o-30.curr-default") :
               (".pointer" + (nowDate === moment.date() && nowDate === date ? ".currDate.userSelDate" : nowDate === date ? ".currDate": moment.date() === date ? ".userSelDate" : ""))
             ),
-            {onclick : selectDate},
-            dateObj.date
+            !prevMonDate && {onclick : ()=>selectDate(date)},
+            date
           )
         })
       ])

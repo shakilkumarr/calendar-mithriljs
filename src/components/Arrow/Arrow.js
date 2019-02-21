@@ -1,10 +1,16 @@
-var mithril = require("mithril").m
+var mithril = require("mithril")
 require("tachyons")
 require("./Arrow.css")
+var appstate = require("../../appstate")
 
+var changeRoute = function(action){
+  let targetDate = appstate().userMoment[action.action](1,action.actionName).format("YYYY/MM/DD");
+  mithril.route.set("/calender/"+targetDate);
+}
 var Arrow = {
   view : function(vnode){
-    return mithril("span.dib.br4.pointer.arrow-cust."+vnode.attrs.name)
+    let attrs = vnode.attrs;
+    return mithril.m("span.dib.br4.pointer.arrow-cust."+attrs.name, {onclick : ()=> changeRoute(attrs)})
   }
 }
 

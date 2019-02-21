@@ -7,3 +7,9 @@
 .bg-cust-blue{
   background-color: #198eb8;
 }
+.cust-min-350{
+  min-width: 350px;
+}
+.cust-min-450{
+  min-width: 450px;
+}
