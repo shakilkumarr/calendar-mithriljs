@@ -1,12 +1,12 @@
 var mithril = require("mithril").m
 require("./MonthAndYear.css")
-var appstate = require("../../appstate");
+var appState = require("../appState/appState")
 var Arrow = require("../Arrow/Arrow")
 require("tachyons")
 
 var MonthAndYear = {
   view : function(){
-    let moment = appstate().userMoment;
+    let moment = appState().userMoment;
     return mithril("div.flex.flex-column.justify-cust-evenly.f7.w4",[
       mithril("div.o-70.flex.items-center.justify-cust-evenly",[
         mithril(Arrow,{name: "left", actionName : "month",action : "subtract"}),

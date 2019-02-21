@@ -1,10 +1,10 @@
 var mithril = require("mithril")
 require("tachyons")
 require("./Arrow.css")
-var appstate = require("../../appstate")
+var appState = require("../appState/appState")
 
 var changeRoute = function(action){
-  let targetDate = appstate().userMoment[action.action](1,action.actionName).format("YYYY/MM/DD");
+  let targetDate = appState().userMoment[action.action](1,action.actionName).format("YYYY/MM/DD");
   mithril.route.set("/calender/"+targetDate);
 }
 var Arrow = {

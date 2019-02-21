@@ -1,12 +1,12 @@
 var mithril = require("mithril").m
-var appstate = require("../../appstate");
+var appState = require("../appState/appState")
 require("tachyons")
 var MonthAndYear = require("../MonthAndYear/MonthAndYear")
 
 var DateInfo = {
   view : function(){
     return mithril("div.flex.justify-between",[
-      mithril("div.f-headline.fw3.mr4",appstate().userMoment.date()),
+      mithril("div.f-headline.fw3.mr4",appState().userMoment.date()),
       mithril(MonthAndYear)
     ])
   }

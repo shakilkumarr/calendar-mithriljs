@@ -2,7 +2,7 @@ var mithril = require("mithril")
 require("tachyons")
 require("./DateList.css");
 var currMoment = require("moment");
-var appstate = require("../../appstate");
+var appState = require("../appState/appState")
 var calendarObj = require("../getCalender/getCalender");
 
 var checkPrevDate = (count,prevMonDate,index,date,obj) =>{
@@ -24,7 +24,7 @@ var DateList = {
   view : function(vnode) {
     let count = 0;
     let prevMonDate = false;
-    let moment = appstate().userMoment;
+    let moment = appState().userMoment;
     let isFinished = false;
     let nowDate = currMoment().format("YYYY/MM") === moment.format("YYYY/MM") ? currMoment().date() : 50;
 
@@ -34,7 +34,7 @@ var DateList = {
           let date = dateObj.date;
           if(isFinished || (rowIndex > 0 && index === 0 && date === 1)){
               isFinished = true;
-              return 
+              return
           }
           [prevMonDate,count] = checkPrevDate(count,prevMonDate,index,date,obj);
           return mithril.m(
